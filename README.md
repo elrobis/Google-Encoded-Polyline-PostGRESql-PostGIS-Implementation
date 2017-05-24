@@ -23,9 +23,17 @@ SELECT GoogleEncodePolygon(the_geom) from StateParks where name = 'Sequicentenni
 
 ### Testing and Debugging Geometry Encodings
 
-I created a simple online utility you can use to test your encodings. Just copy and paste a polyline/polygon encoded text string into the text field at the bottom of the page and click "Render".
+I created a couple simple online utilities for Leaflet and Google, respectively, that you can use to test encodings. Just copy and paste a polyline/polygon encoded text string into the text field at the bottom of the page and click "Render". 
 
-http://www.elrobis.com/site/apps/polyline/google_maps_encoded_line_test.php
+Note that these encodings will work in either utility :) I'm mostly just demonstrating that you don't necessarily _have_ to use Google's JavaScript mapping library, and that the resources are out there to use this in Leaflet, Open Layers, and others.
+
+Leaflet Utility:
+
+http://www.elrobis.com/site/apps/polyline/leaflet-google-encoded-line-test.html
+
+Google Utility: 
+
+http://www.elrobis.com/site/apps/polyline/google-maps-encoded-line-test.html
 
 Example Polyline Encoding for Sequicentennial State Park, a single-part polygon with one interior ring (a.k.a. hole):
 
@@ -42,3 +50,19 @@ MULTIPOLYGON(((-80.9033727102669 34.0995445126041,-80.903398752587 34.0995069084
 ### Google Maps JavaScript Client
 
 `G.GoogleEncodedPolyline.js` contains a single JavaScript function you can call to render these encodings in a Google map object. It's mostly just an example, but you can include the file and use it in your application as-is or adapt and extend it to suit your own purposes.
+
+### Leaflet JavaScript Client
+
+While Leaflet does not natively support these encoded features, Jan Pieter Waagmeester has provided a Leaflet plugin that adds this functionality. You can get it here:
+
+https://github.com/jieter/Leaflet.encoded
+
+Once you have the Leaflet plugin, check `L.GoogleEncodedPolyline.js` for an example implementation nearly identical to the Google implementation above. Like the Google implementation, you can include it and use it as-is, or you can adapt it and extend it to accomodate your own purposes.
+
+The Leaflet example provided above in the Testing and Debugging section includes `L.GoogleEncodedPolyline.js` and calls the demo function, which you can review if you view the page source.
+
+### OpenLayers JavaScript Client
+
+I have not personally experimented with OpenLayers' implementation for Google Encoded features, but it appears to have native support for _simple_ encodings (as opposed to complex, multipart features and/or polygons with holes). Using my examples for Google and Leaflet, you should be able to write your own parser to split apart the delimited feature parts and add them to an OpenLayers map.
+
+http://dev.openlayers.org/examples/encoded-polyline.html
