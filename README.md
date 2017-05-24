@@ -25,7 +25,7 @@ SELECT GoogleEncodePolygon(the_geom) from StateParks where name = 'Sequicentenni
 
 I created a couple simple online utilities for Leaflet and Google, respectively, that you can use to test encodings. Just copy and paste a polyline/polygon encoded text string into the text field at the bottom of the page and click "Render". 
 
-Note that these encodings will work in either utility :) I'm mostly just demonstrating that you don't necessarily _have_ to use Google's JavaScript mapping library, and that the resources are out there to use this in Leaflet, Open Layers, and others.
+Note that these encodings will work in either utility :) I'm just demonstrating that you don't necessarily _have_ to use Google's JavaScript mapping library, and that the resources are out there to use this in Leaflet, OpenLayers, and others.
 
 Leaflet Utility:
 
