@@ -2,9 +2,11 @@
 PostGREsql/PostGIS Implementation of Google’s Encoded Polyline Algorithm
 
 Tested on the following and presumed to work on more recent versions of the database:
+
 PostgreSQL 8.4.9 / POSTGIS 1.5.3
 
 Discussion and implementation details available on Cartometric blog at:
+
 http://cartometric.com/blog/2014/01/27/postgresql-postgis-implementation-of-google-encoded-polyline-algorithm/
 
 ### PostGRESql/PostGIS Database
