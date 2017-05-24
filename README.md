@@ -41,4 +41,4 @@ MULTIPOLYGON(((-80.9033727102669 34.0995445126041,-80.903398752587 34.0995069084
 
 ### Google Maps JavaScript Client
 
-`RenderGoogleEncodedPolyline.js` contains a single JavaScript function you can call to render these encodings in a Google map object. It's mostly just an example, but you can include the file and use it in your application as-is or adapt and extend it to suit your own purposes.
+`G.GoogleEncodedPolyline.js` contains a single JavaScript function you can call to render these encodings in a Google map object. It's mostly just an example, but you can include the file and use it in your application as-is or adapt and extend it to suit your own purposes.
